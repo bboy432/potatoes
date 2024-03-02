@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Google Sheets Data Viewer</title>
+</head>
+<body>
+  <h1>Data from Google Sheets</h1>
+  <div id="data"></div>
+
+  <script>
+    fetch('YOUR_WEB_APP_URL')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('data').innerHTML = `Number 1: ${data.number1}, Number 2: ${data.number2}`;
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  </script>
+</body>
+</html>
